@@ -1,5 +1,10 @@
-theme: jekyll-theme-cayman
-
 # Setup
-title: [디지털미디어랩 머신러닝 여름캠프]
-description: []
+title:        디지털미디어랩 머신러닝 여름캠프
+tagline:      Machine Learning For Designers
+baseurl:      ""
+paginate:     1
+
+# About/contact
+author:
+  name:       Yonsei Digital Media Lab.
+  url:        http://sites.google.com/site/yonseidmlab
