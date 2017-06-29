@@ -26,7 +26,7 @@ Syntax highlighted code block
 [Link](https://yonseidmlab.github.io/dmlab-week1-2.html) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+For more details see [GitHub Flavored Markdown](https://yonseidmlab.github.io/dmlab-week1-2.html).
 
 ### Jekyll Themes
 
