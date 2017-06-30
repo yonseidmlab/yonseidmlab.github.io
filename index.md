@@ -12,7 +12,7 @@
 * 데이터 사이언스 스쿨 : [https://datascienceschool.net/view-notebook/661128713b654edc928ecb455a826b1d/](https://datascienceschool.net/view-notebook/661128713b654edc928ecb455a826b1d/)
 
 
-### 일정  커리큘럼
+### 일정 및 커리큘럼
 |      |                 |                                          |
 | ---- | --------------- | ---------------------------------------- |
 | 1주차  | (6/30) am 10-12 | Python 개발환경, 기본문법, 조건문, 함수, 반복문          |
