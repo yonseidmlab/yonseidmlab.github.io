@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>dmlab-week2-2</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>dmlab-week2-4</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11778,11 +11778,11 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="&#46356;&#51648;&#53560;&#48120;&#46356;&#50612;&#47017;-&#47672;&#49888;&#47084;&#45789;-&#50668;&#47492;&#52896;&#54532;">&#46356;&#51648;&#53560;&#48120;&#46356;&#50612;&#47017; &#47672;&#49888;&#47084;&#45789; &#50668;&#47492;&#52896;&#54532;<a class="anchor-link" href="#&#46356;&#51648;&#53560;&#48120;&#46356;&#50612;&#47017;-&#47672;&#49888;&#47084;&#45789;-&#50668;&#47492;&#52896;&#54532;">&#182;</a></h2><p>2주차(2) : Python 기본 자료형 다루기 (Dictionary, Tuple, Set)</p>
+<h2 id="&#46356;&#51648;&#53560;&#48120;&#46356;&#50612;&#47017;-&#47672;&#49888;&#47084;&#45789;-&#50668;&#47492;&#52896;&#54532;">&#46356;&#51648;&#53560;&#48120;&#46356;&#50612;&#47017; &#47672;&#49888;&#47084;&#45789; &#50668;&#47492;&#52896;&#54532;<a class="anchor-link" href="#&#46356;&#51648;&#53560;&#48120;&#46356;&#50612;&#47017;-&#47672;&#49888;&#47084;&#45789;-&#50668;&#47492;&#52896;&#54532;">&#182;</a></h2><p>2주차(4) : Pandas 다루기 - Series</p>
 <h4 id="&#52280;&#44256;-&#51088;&#47308;">&#52280;&#44256; &#51088;&#47308;<a class="anchor-link" href="#&#52280;&#44256;-&#51088;&#47308;">&#182;</a></h4><ul>
 <li>코드스쿨 : <a href="https://www.codeschool.com/learn/python">https://www.codeschool.com/learn/python</a></li>
 <li>코드아카데미 : <a href="https://www.codecademy.com/learn/python">https://www.codecademy.com/learn/python</a></li>
-<li>데이터 사이언스 스쿨 3장 (파이썬에서 여러 개의 자료를 한 변수에 담기 ~ 파이썬에서 딕셔너리 자료형 다루기) : <a href="https://datascienceschool.net/view-notebook/661128713b654edc928ecb455a826b1d/">https://datascienceschool.net/view-notebook/661128713b654edc928ecb455a826b1d/</a></li>
+<li>데이터 사이언스 스쿨 4장 (Pandas 패키지의 소개¶ ~ 분포와 기술 통계) : <a href="https://datascienceschool.net/view-notebook/661128713b654edc928ecb455a826b1d/">https://datascienceschool.net/view-notebook/661128713b654edc928ecb455a826b1d/</a></li>
 </ul>
 
 </div>
@@ -11793,12 +11793,19 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.-&#46357;&#49492;&#45320;&#47532;(Dictionary)">2. &#46357;&#49492;&#45320;&#47532;(Dictionary)<a class="anchor-link" href="#2.-&#46357;&#49492;&#45320;&#47532;(Dictionary)">&#182;</a></h2><ul>
-<li>리스트가 순서로 자료를 저장한다면, 딕셔너리는 이름을 붙여서 자료를 저장한다.</li>
-<li>파이썬에서는 자료의 이름을 키(key)라고 하고 자료의 값을 값(value)라고 한다.</li>
+<h2 id="Pandas-&#54056;&#53412;&#51648;">Pandas &#54056;&#53412;&#51648;<a class="anchor-link" href="#Pandas-&#54056;&#53412;&#51648;">&#182;</a></h2><ul>
+<li>Pandas 패키지는 데이터 분석을 할 때 가장 많이 쓰이는 패키지 중의 하나이다.</li>
+<li>대부분의 데이터는 시계열(series)이나 표(table)의 형태로 나타낼 수 있다.</li>
+<li>Pandas 패키지에서는 이러한 표 데이터를 다루기 위한 시리즈(Series) 클래스와 데이터프레임(DataFrame) 클래스를 제공한다.</li>
 </ul>
-
-<pre><code>딕셔너리변수 = {자료이름1: 자료값1, 자료이름2: 자료값2, 자료이름3: 자료값3}</code></pre>
+<h3 id="Series">Series<a class="anchor-link" href="#Series">&#182;</a></h3><ul>
+<li>시리즈는 NumPy에서 제공하는 1차원 배열과 비슷하지만 각 데이터의 의미를 표시하는 인덱스(index)를 붙일 수 있다.</li>
+<li>데이터를 리스트나 1차원 배열 형식으로 시리즈 타입의 데이터를 만들 수 있다.</li>
+<li>인덱스의 길이는 데이터의 길이와 같아야 한다.</li>
+<li>다음 예에서 이 "서울", "부산" 등의 문자열이 인덱스의 값이다.</li>
+<li>인덱스의 값을 인덱스 라벨(label)이라고도 한다.</li>
+<li>인덱스 라벨은 문자열 뿐 아니라 날짜, 시간, 정수 등도 가능하다.</li>
+</ul>
 
 </div>
 </div>
@@ -11808,8 +11815,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;math&quot;</span><span class="p">:</span> <span class="mi">88</span><span class="p">,</span> <span class="s2">&quot;english&quot;</span><span class="p">:</span> <span class="mi">90</span><span class="p">,</span> <span class="s2">&quot;history&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">9904312</span><span class="p">,</span> <span class="mi">3448737</span><span class="p">,</span> <span class="mi">2890451</span><span class="p">,</span> <span class="mi">2466052</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;서울&quot;</span><span class="p">,</span> <span class="s2">&quot;부산&quot;</span><span class="p">,</span> <span class="s2">&quot;인천&quot;</span><span class="p">,</span> <span class="s2">&quot;대구&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11823,8 +11832,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>딕셔너리 자료형 변수에서 특정한 자료를 꺼낼때도 마찬가지로 인덱싱(indexing) 연산을 한다.</li>
-<li>딕셔너리 자료형 변수에서 인덱싱 연산을 하는 경우에도 다음과 같이 대괄호(bracket)를 변수 이름 끝에 붙이고 그 안에 자료의 키를 넣는다.</li>
+<li>만약 인덱스를 지정하지 않고 시리즈를 만들면 시리즈의 인덱스는 0부터 시작하는 정수값이 된다.</li>
 </ul>
 
 </div>
@@ -11835,8 +11843,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="s2">&quot;math&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="s2">&quot;english&quot;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">9904312</span><span class="p">,</span> <span class="mi">3448737</span><span class="p">,</span> <span class="mi">2890451</span><span class="p">,</span> <span class="mi">2466052</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11850,7 +11858,8 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>파이썬에서는 자료의 키는 무엇이든 가능하다. 즉, 숫자도 키가 될 수 있다.</li>
+<li>시리즈의 인덱스는 index 속성으로 접근할 수 있다.</li>
+<li>시리즈의 값은 사실 NumPy의 1차원 배열이며 values 속성으로 접근할 수 있다.</li>
 </ul>
 
 </div>
@@ -11861,10 +11870,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">:</span> <span class="mi">20</span><span class="p">}</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11878,7 +11885,177 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>딕셔너리는 프로그래머가 복잡한 데이터를 다룰 때 유용하다.</li>
+<li>또한 시리즈 데이터는 자체적으로 name이라는 속성을 가질 수 있다.</li>
+<li>인덱스도 마찬가지. (index.name)</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;인구&quot;</span>
+<span class="n">s</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span><span class="s2">&quot;도시&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#49884;&#47532;&#51592;-&#50672;&#49328;">&#49884;&#47532;&#51592; &#50672;&#49328;<a class="anchor-link" href="#&#49884;&#47532;&#51592;-&#50672;&#49328;">&#182;</a></h3><ul>
+<li>시리즈는 NumPy 배열과 동일하게 벡터화 연산을 할 수 있다.</li>
+<li>다만 연산을 해도 인덱스 값은 변하지 않는다.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">/</span> <span class="mi">1000</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">s</span> <span class="o">*</span> <span class="mi">1000</span>
+<span class="n">t</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;인구2&quot;</span>
+<span class="n">t</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;도시2&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#49884;&#47532;&#51592;-&#51064;&#45937;&#49905;">&#49884;&#47532;&#51592; &#51064;&#45937;&#49905;<a class="anchor-link" href="#&#49884;&#47532;&#51592;-&#51064;&#45937;&#49905;">&#182;</a></h3><ul>
+<li>NumPy 배열에서 가능한 인덱스 방법이외에도 인덱스 라벨을 이용한 인덱싱도 할 수 있다.</li>
+<li>배열 인덱싱이나 인덱스 라벨을 이용한 슬라이싱(slicing)도 가능하다.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="s2">&quot;부산&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="s2">&quot;대구&quot;</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>배열 인덱싱을 하면 자료의 순서를 바꾸거나 특정한 자료만 선택할 수 있다.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[[</span><span class="s2">&quot;서울&quot;</span><span class="p">,</span> <span class="s2">&quot;부산&quot;</span><span class="p">,</span> <span class="s2">&quot;대구&quot;</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">]])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">s</span> <span class="o">&gt;</span> <span class="mi">5000</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>문자열 라벨을 이용한 슬라이싱을 하는 경우 콜론(:) 기호 뒤에 오는 인덱스에 해당하는 값도 포함된다는 점이 일반적인 인덱싱과 다르다.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="s2">&quot;서울&quot;</span><span class="p">:</span><span class="s2">&quot;인천&quot;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">서울</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#46357;&#49492;&#45320;&#47532;&#50752;-&#49884;&#47532;&#51592;">&#46357;&#49492;&#45320;&#47532;&#50752; &#49884;&#47532;&#51592;<a class="anchor-link" href="#&#46357;&#49492;&#45320;&#47532;&#50752;-&#49884;&#47532;&#51592;">&#182;</a></h3><ul>
+<li>시리즈는 라벨값에 의해 인덱싱이 가능하므로, 딕셔너리와 유사하다.</li>
+<li>딕셔너리와 시리즈는 서로 변환이 가능하다.</li>
 </ul>
 
 </div>
@@ -11893,11 +12070,10 @@ div#notebook {
          <span class="s2">&quot;영어&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">75</span><span class="p">],</span>
          <span class="s2">&quot;과학&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">95</span><span class="p">]}</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="s2">&quot;수학&quot;</span><span class="p">])</span>
+<span class="n">score_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
 
-<span class="n">english_average</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="s2">&quot;영어&quot;</span><span class="p">])</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="s2">&quot;영어&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;영어 평균점수는 &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">english_average</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;점 입니다.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">score_series</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">score_series</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -11910,8 +12086,29 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#46357;&#49492;&#45320;&#47532;&#50752;-&#48152;&#48373;&#47928;">&#46357;&#49492;&#45320;&#47532;&#50752; &#48152;&#48373;&#47928;<a class="anchor-link" href="#&#46357;&#49492;&#45320;&#47532;&#50752;-&#48152;&#48373;&#47928;">&#182;</a></h3><ul>
-<li>딕셔너리도 리스트와 마찬가지로 반복문을 이용할 수 있다.</li>
+<h3 id="&#49884;&#47532;&#51592;&#51032;-&#54632;&#49688;&#46308;">&#49884;&#47532;&#51592;&#51032; &#54632;&#49688;&#46308;<a class="anchor-link" href="#&#49884;&#47532;&#51592;&#51032;-&#54632;&#49688;&#46308;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><p>시리즈가 자체으로 가지고 있는 함수들이 있다.</p>
+</li>
+<li><p>통계관련</p>
+<ol>
+<li>mean() : 평균</li>
+<li>std() : 표준편차</li>
+<li>count() : 전체 수</li>
+<li>min() : 최소 값</li>
+<li>max() : 최대 값</li>
+<li>diff() : 변화량</li>
+<li>describe() : 기술통계 요약</li>
+</ol>
+</li>
 </ul>
 
 </div>
@@ -11922,22 +12119,9 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;수학&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">],</span>
-         <span class="s2">&quot;영어&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">90</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">75</span><span class="p">],</span>
-         <span class="s2">&quot;과학&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">95</span><span class="p">]}</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;key 값을 읽어와 불러옴.&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
-    
-<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">scores</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
-    
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">value 값을 읽어와 불러옴.&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">scores</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grades</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mf">4.3</span><span class="p">,</span> <span class="mf">3.7</span><span class="p">,</span> <span class="mf">4.3</span><span class="p">,</span> <span class="mf">3.3</span><span class="p">,</span> <span class="mf">3.8</span><span class="p">,</span> <span class="mf">4.2</span><span class="p">,</span> <span class="mf">3.5</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">])</span>
+<span class="n">grades</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;학점&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grades</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11945,71 +12129,18 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="&#49892;&#49845;-2-:-&#54617;&#51216;-&#44228;&#49328;-&#54532;&#47196;&#44536;&#47016;-&#47564;&#46308;&#50612;&#48372;&#44592;">&#49892;&#49845; 2 : &#54617;&#51216; &#44228;&#49328; &#54532;&#47196;&#44536;&#47016; &#47564;&#46308;&#50612;&#48372;&#44592;<a class="anchor-link" href="#&#49892;&#49845;-2-:-&#54617;&#51216;-&#44228;&#49328;-&#54532;&#47196;&#44536;&#47016;-&#47564;&#46308;&#50612;&#48372;&#44592;">&#182;</a></h4><ul>
-<li>주어진 자료를 활용하여 학점 평균을 계산하는 프로그램을 만들어보자.</li>
-</ul>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grade_per_lecture</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;현대디자인론&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-                  <span class="s2">&quot;통합디자인연구&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-                  <span class="s2">&quot;석사세미나&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-                  <span class="s2">&quot;박사세미나&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-                  <span class="s2">&quot;연구방법론&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-                  <span class="s2">&quot;사용자인터페이스디자인연구&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
-
-<span class="n">grades</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;A+&quot;</span> <span class="p">:</span> <span class="mf">4.3</span><span class="p">,</span> <span class="s2">&quot;A0&quot;</span> <span class="p">:</span> <span class="mf">4.0</span><span class="p">,</span> <span class="s2">&quot;A-&quot;</span> <span class="p">:</span> <span class="mf">3.7</span><span class="p">,</span>
-          <span class="s2">&quot;B+&quot;</span> <span class="p">:</span> <span class="mf">3.3</span><span class="p">,</span> <span class="s2">&quot;B0&quot;</span> <span class="p">:</span> <span class="mf">3.0</span><span class="p">,</span> <span class="s2">&quot;B-&quot;</span> <span class="p">:</span> <span class="mf">2.7</span><span class="p">,</span>
-          <span class="s2">&quot;C+&quot;</span> <span class="p">:</span> <span class="mf">2.3</span><span class="p">,</span> <span class="s2">&quot;C0&quot;</span> <span class="p">:</span> <span class="mf">2.0</span><span class="p">,</span> <span class="s2">&quot;C-&quot;</span> <span class="p">:</span> <span class="mf">1.7</span><span class="p">,</span>
-          <span class="s2">&quot;D+&quot;</span> <span class="p">:</span> <span class="mf">1.3</span><span class="p">,</span> <span class="s2">&quot;D0&quot;</span> <span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s2">&quot;D-&quot;</span> <span class="p">:</span> <span class="mf">0.7</span><span class="p">,</span> <span class="s2">&quot;F&quot;</span> <span class="p">:</span> <span class="mf">0.0</span><span class="p">}</span>
-
-<span class="n">my_grades</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;현대디자인론&quot;</span> <span class="p">:</span> <span class="s2">&quot;A-&quot;</span><span class="p">,</span> <span class="s2">&quot;석사세미나&quot;</span> <span class="p">:</span> <span class="s2">&quot;C+&quot;</span><span class="p">,</span> <span class="s2">&quot;연구방법론&quot;</span> <span class="p">:</span> <span class="s2">&quot;B0&quot;</span><span class="p">,</span> <span class="s2">&quot;사용자인터페이스디자인연구&quot;</span> <span class="p">:</span> <span class="s2">&quot;B+&quot;</span><span class="p">}</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.-&#53916;&#54540;(Tuple)">3. &#53916;&#54540;(Tuple)<a class="anchor-link" href="#3.-&#53916;&#54540;(Tuple)">&#182;</a></h2><ul>
-<li>순서대로 정렬된 값들의 집합.</li>
-<li>리스트와 매우 비슷하다.</li>
-<li>리스트는 그 값의 생성, 삭제, 수정이 가능하지만 튜플은 그 값을 바꿀 수 없다.</li>
-</ul>
-
-<pre><code>튜플변수 = (자료값1, 자료값2)</code></pre>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;현대디자인론&quot;</span><span class="p">,</span> <span class="s2">&quot;A+&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">))</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">std</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">count</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">diff</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
 </pre></div>
 
 </div>
@@ -12023,7 +12154,14 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>여러 변수를 동시에 인덱싱해야할 때 유용하다.</li>
+<li>인덱싱 관련<ol>
+<li>nonzero() : 값이 0이 아닌 것들의 index를 배열로 반환</li>
+<li>notnull() : 값이 있는 것을 시리즈로 반환</li>
+<li>isnull() : 값이 없는 것을 시리즈로 반환</li>
+<li>nlargest(n) : n개의 가장 큰 값들을 시리즈로 반환 (n의 default값은 5)</li>
+<li>nsmallest(n) : n개의 가장 작은 값들을 시리즈로 반환 (n의 default값은 5)</li>
+</ol>
+</li>
 </ul>
 
 </div>
@@ -12034,15 +12172,11 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grade_per_lecture</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;현대디자인론&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
-                  <span class="p">(</span><span class="s2">&quot;통합디자인연구&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
-                  <span class="p">(</span><span class="s2">&quot;석사세미나&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
-                  <span class="p">(</span><span class="s2">&quot;박사세미나&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
-                  <span class="p">(</span><span class="s2">&quot;연구방법론&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
-                  <span class="p">(</span><span class="s2">&quot;사용자인터페이스디자인연구&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)]</span>
-
-<span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">grade</span> <span class="ow">in</span> <span class="n">grade_per_lecture</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">grade</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">nonzero</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">notnull</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">isnull</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">nlargest</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">grades</span><span class="o">.</span><span class="n">nsmallest</span><span class="p">())</span>
 </pre></div>
 
 </div>
@@ -12055,10 +12189,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>함수에서 두 개 이상의 값을 반한하면 자동적으로 튜플을 리턴</li>
-</ul>
-
+<h3 id="&#45936;&#51060;&#53552;&#51032;-&#52628;&#44032;,-&#44081;&#49888;,-&#49325;&#51228;">&#45936;&#51060;&#53552;&#51032; &#52628;&#44032;, &#44081;&#49888;, &#49325;&#51228;<a class="anchor-link" href="#&#45936;&#51060;&#53552;&#51032;-&#52628;&#44032;,-&#44081;&#49888;,-&#49325;&#51228;">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -12067,15 +12198,10 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">two_largest_number</span><span class="p">(</span><span class="n">arr</span><span class="p">):</span>
-    <span class="n">first</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-    <span class="n">arr</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">first</span><span class="p">)</span>
-    <span class="n">second</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">first</span><span class="p">,</span> <span class="n">second</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="s2">&quot;서울&quot;</span><span class="p">:</span> <span class="mi">9631482</span><span class="p">,</span> <span class="s2">&quot;부산&quot;</span><span class="p">:</span> <span class="mi">3393191</span><span class="p">,</span> <span class="s2">&quot;인천&quot;</span><span class="p">:</span> <span class="mi">2632035</span><span class="p">,</span> <span class="s2">&quot;대전&quot;</span><span class="p">:</span> <span class="mi">1490158</span><span class="p">},</span> 
+               <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;부산&quot;</span><span class="p">,</span> <span class="s2">&quot;서울&quot;</span><span class="p">,</span> <span class="s2">&quot;인천&quot;</span><span class="p">,</span> <span class="s2">&quot;대전&quot;</span><span class="p">])</span>
 
-<span class="n">scores</span> <span class="o">=</span> <span class="p">[</span><span class="mi">80</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">82</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">79</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">two_largest_number</span><span class="p">(</span><span class="n">scores</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12088,10 +12214,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>변수의 값을 서로 바꿀 때도 유용하다. (Swap)</li>
-</ul>
-
+<h4 id="&#52628;&#44032;">&#52628;&#44032;<a class="anchor-link" href="#&#52628;&#44032;">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -12100,13 +12223,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">50</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">30</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-
-<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s2</span><span class="p">[</span><span class="s2">&quot;대구&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1234567</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12119,14 +12237,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="4.-&#51665;&#54633;(Set)">4. &#51665;&#54633;(Set)<a class="anchor-link" href="#4.-&#51665;&#54633;(Set)">&#182;</a></h2><ul>
-<li>집합에 관련된 것들을 쉽게 처리하기 위해 만들어진 자료형.</li>
-<li>순서가 없다.</li>
-<li>자주 쓰이지는 않으니 알아두면 좋은 정도</li>
-</ul>
-
-<pre><code>집합변수명 = {집합자료1, 집합자료2, 집합자료 3}</code></pre>
-
+<h4 id="&#44081;&#49888;">&#44081;&#49888;<a class="anchor-link" href="#&#44081;&#49888;">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -12135,26 +12246,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">{</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">}</span>
-<span class="n">b</span> <span class="o">=</span> <span class="p">{</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">}</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">&amp;</span><span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">|</span><span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s2</span><span class="p">[</span><span class="s2">&quot;대구&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">9999999</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12167,11 +12260,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#51088;&#47308;&#54805;&#44036;&#51032;-&#48320;&#54872;">&#51088;&#47308;&#54805;&#44036;&#51032; &#48320;&#54872;<a class="anchor-link" href="#&#51088;&#47308;&#54805;&#44036;&#51032;-&#48320;&#54872;">&#182;</a></h3><ul>
-<li>각 자료형 마다 list(), dict(), tuple(), set() 함수를 통해 서로 변환이 가능하다.</li>
-<li>딕셔너리가 다른 자료형으로 변환되는 경우는 key값으로 변환되며, 다른 자료형이 딕셔너리로 변환시에는 key와 value값이 동시에 입력되어야 한다.</li>
-</ul>
-
+<h4 id="&#49325;&#51228;">&#49325;&#51228;<a class="anchor-link" href="#&#49325;&#51228;">&#182;</a></h4>
 </div>
 </div>
 </div>
@@ -12180,17 +12269,8 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
-<span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;a&quot;</span> <span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span> <span class="p">:</span> <span class="mi">6</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span> <span class="p">:</span> <span class="mi">7</span><span class="p">}</span>
-<span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
-<span class="n">s</span> <span class="o">=</span> <span class="p">{</span><span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
-
-<span class="n">k</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">,</span> <span class="s2">&quot;f&quot;</span><span class="p">,</span> <span class="s2">&quot;g&quot;</span><span class="p">]</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">d</span><span class="p">),</span> <span class="nb">list</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="nb">list</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">keys</span> <span class="o">=</span> <span class="n">k</span><span class="p">,</span> <span class="n">values</span> <span class="o">=</span> <span class="n">l</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">tuple</span><span class="p">(</span><span class="n">l</span><span class="p">),</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">d</span><span class="p">),</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">l</span><span class="p">),</span> <span class="nb">set</span><span class="p">(</span><span class="n">d</span><span class="p">),</span> <span class="nb">set</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">del</span> <span class="n">s2</span><span class="p">[</span><span class="s2">&quot;대구&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
 </pre></div>
 
 </div>
