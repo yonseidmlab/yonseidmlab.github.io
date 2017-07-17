@@ -15,7 +15,7 @@
 *  [예제 데이터](https://yonseidmlab.github.io/example.xlsx).
 
 ### 3주차
-1. [기본적인 머신러닝의 용어와 개념](https://yonseidmlab.github.io/dmlab-week2.pdf).
+1. [기본적인 머신러닝의 용어와 개념](https://yonseidmlab.github.io/dmlab-week3.pdf).
 2. [Linear Regression의 Hypothesis와 Cost 설명](https://yonseidmlab.github.io/dmlab-week3-2.pdf).
 3. [Scikit-Learn 패키지와 Linear Regression 실습](https://yonseidmlab.github.io/dmlab-week3-3.html).
 *  [예제 데이터(훈련)](https://yonseidmlab.github.io/week4_train.xlsx).
