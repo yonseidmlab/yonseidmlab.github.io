@@ -17,16 +17,16 @@
 1. [기본적인 머신러닝의 용어와 개념](https://yonseidmlab.github.io/dmlab-week3.pdf).
 2. [Linear Regression의 Hypothesis와 Cost 설명](https://yonseidmlab.github.io/dmlab-week3-2.pdf).
 3. [Scikit-Learn 패키지와 Linear Regression 실습](https://yonseidmlab.github.io/dmlab-week3-3.html).
-*  [예제 데이터(훈련)](https://yonseidmlab.github.io/week3_example1_train.xlsx).
-*  [예제 데이터(테스트)](https://yonseidmlab.github.io/week3_example1_test.xlsx).
+*  [예제 데이터1(훈련)](https://yonseidmlab.github.io/week3_example1_train.xlsx).
+*  [예제 데이터1(테스트)](https://yonseidmlab.github.io/week3_example1_test.xlsx).
 *  [실습 데이터(Bike Sharing Demand)](https://yonseidmlab.github.io/bike_train.csv).
 4. [Multivariable Decision Tree](https://yonseidmlab.github.io/dmlab3주차4.pdf).
-*  [예제 데이터(훈련)](https://yonseidmlab.github.io/week3_example2_train.xlsx).
-*  [예제 데이터(테스트)](https://yonseidmlab.github.io/week3_example2_test.xlsx).
+*  [예제 데이터2(훈련)](https://yonseidmlab.github.io/week3_example2_train.xlsx).
+*  [예제 데이터2(테스트)](https://yonseidmlab.github.io/week3_example2_test.xlsx).
 5. [Bike Sharing Demand 실습](https://yonseidmlab.github.io/dmlab-week3-5.html).
 6. [Classification과 Decision Tree](https://yonseidmlab.github.io/dmlab3주차6.pdf).
-*  [예제 데이터(훈련)](https://yonseidmlab.github.io/week3_example3_train.xlsx).
-*  [예제 데이터(테스트)](https://yonseidmlab.github.io/week3_example3_test.xlsx).
+*  [예제 데이터3(훈련)](https://yonseidmlab.github.io/week3_example3_train.xlsx).
+*  [예제 데이터3(테스트)](https://yonseidmlab.github.io/week3_example3_test.xlsx).
 
 ### 참고자료
 * 데이터 사이언스 스쿨 : [https://datascienceschool.net/view-notebook/661128713b654edc928ecb455a826b1d/](https://datascienceschool.net/view-notebook/661128713b654edc928ecb455a826b1d/)
