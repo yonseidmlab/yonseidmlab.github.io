@@ -28,6 +28,12 @@
 *  [예제 데이터3(훈련)](https://yonseidmlab.github.io/week3_example3_train.xlsx).
 *  [예제 데이터3(테스트)](https://yonseidmlab.github.io/week3_example3_test.xlsx).
 
+### 4주차
+1. [Classification 모델의 평가 – Confusion Matrix](https://yonseidmlab.github.io/dmlab-week4.pdf).
+2. [Support Vector Machine](https://yonseidmlab.github.io/dmlab-week4-2.pdf).
+3. [Overfitting, Cross Validation](https://yonseidmlab.github.io/dmlab-week4-3.pdf).
+*  [예제 데이터(MNIST)](https://yonseidmlab.github.io/week4-mnist.csv).
+
 ### 참고자료
 * 데이터 사이언스 스쿨 : [https://datascienceschool.net/view-notebook/661128713b654edc928ecb455a826b1d/](https://datascienceschool.net/view-notebook/661128713b654edc928ecb455a826b1d/)
 * 모두를 위한 딥러닝/머신러닝 : [http://hunkim.github.io/ml/](http://hunkim.github.io/ml/)
