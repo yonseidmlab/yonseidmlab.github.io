@@ -33,6 +33,8 @@
 2. [Support Vector Machine](https://yonseidmlab.github.io/dmlab-week4-2.pdf).
 3. [Overfitting, Cross Validation](https://yonseidmlab.github.io/dmlab-week4-3.pdf).
 *  [예제 데이터(MNIST)](https://yonseidmlab.github.io/week4-mnist.csv).
+4. [Logistic Regression, Softmax Function](https://yonseidmlab.github.io/dmlab-week4-4.pdf).
+5. [머신러닝 치트시트 및 딥러닝 프레임워크 등](https://yonseidmlab.github.io/dmlab-week4-5.pdf).
 
 ### 참고자료
 * 데이터 사이언스 스쿨 : [https://datascienceschool.net/view-notebook/661128713b654edc928ecb455a826b1d/](https://datascienceschool.net/view-notebook/661128713b654edc928ecb455a826b1d/)
