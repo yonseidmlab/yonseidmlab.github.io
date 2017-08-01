@@ -36,6 +36,9 @@
 4. [Logistic Regression, Softmax Function](https://yonseidmlab.github.io/dmlab-week4-4.pdf).
 5. [머신러닝 치트시트 및 딥러닝 프레임워크 등](https://yonseidmlab.github.io/dmlab-week4-5.pdf).
 
+### 5주차
+1. [Neural Network](https://yonseidmlab.github.io/dmlab-week5.pdf)
+
 ### 참고자료
 * 데이터 사이언스 스쿨 : [https://datascienceschool.net/view-notebook/661128713b654edc928ecb455a826b1d/](https://datascienceschool.net/view-notebook/661128713b654edc928ecb455a826b1d/)
 * 모두를 위한 딥러닝/머신러닝 : [http://hunkim.github.io/ml/](http://hunkim.github.io/ml/)
