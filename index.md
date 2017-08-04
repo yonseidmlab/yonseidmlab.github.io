@@ -38,7 +38,7 @@
 
 ### 5주차
 1. [Neural Network](https://yonseidmlab.github.io/dmlab-week5.pdf)
-2. [Neural Network](https://yonseidmlab.github.io/dmlab-week5-2.pdf)
+2. [Neural Network(2)](https://yonseidmlab.github.io/dmlab-week5-2.pdf)
 
 ### 참고자료
 * 데이터 사이언스 스쿨 : [https://datascienceschool.net/view-notebook/661128713b654edc928ecb455a826b1d/](https://datascienceschool.net/view-notebook/661128713b654edc928ecb455a826b1d/)
