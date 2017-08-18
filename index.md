@@ -40,6 +40,10 @@
 1. [Neural Network](https://yonseidmlab.github.io/dmlab-week5.pdf)
 2. [Neural Network(2)](https://yonseidmlab.github.io/dmlab-week5-2.pdf)
 
+### 6주차
+1. [Convolution Neural Networks](https://yonseidmlab.github.io/CNN.pdf.pdf)
+
+
 ### 참고자료
 * 데이터 사이언스 스쿨 : [https://datascienceschool.net/view-notebook/661128713b654edc928ecb455a826b1d/](https://datascienceschool.net/view-notebook/661128713b654edc928ecb455a826b1d/)
 * 모두를 위한 딥러닝/머신러닝 : [http://hunkim.github.io/ml/](http://hunkim.github.io/ml/)
