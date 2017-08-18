@@ -41,7 +41,7 @@
 2. [Neural Network(2)](https://yonseidmlab.github.io/dmlab-week5-2.pdf)
 
 ### 6주차
-1. [Convolution Neural Networks](https://yonseidmlab.github.io/CNN.pdf.pdf)
+1. [Convolution Neural Networks](https://yonseidmlab.github.io/CNN.pdf)
 
 
 ### 참고자료
